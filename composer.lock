@@ -4,8 +4,113 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c61ff82cbf0142a401a48a8161e1595a",
+    "content-hash": "260e1e95a31c247cfb61410fa6356333",
     "packages": [
+        {
+            "name": "artisansdk/contract",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/artisansdk/contract.git",
+                "reference": "5cb92821f6235a509d85b6ba202e0456afe11d18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/artisansdk/contract/zipball/5cb92821f6235a509d85b6ba202e0456afe11d18",
+                "reference": "5cb92821f6235a509d85b6ba202e0456afe11d18",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^5.0 | ^6.0 | ^7.0 | ^8.0",
+                "php": ">=7.0 | >=8.0"
+            },
+            "require-dev": {
+                "artisansdk/bench": "dev-master"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ArtisanSdk\\Contract\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel LaBarge",
+                    "email": "daniel@artisanscollaborative.com"
+                }
+            ],
+            "description": "Contracts (interfaces) for framework extensions included in Artisan SDK.",
+            "support": {
+                "issues": "https://github.com/artisansdk/contract/issues",
+                "source": "https://github.com/artisansdk/contract/tree/master"
+            },
+            "time": "2021-10-23T01:32:29+00:00"
+        },
+        {
+            "name": "artisansdk/cqrs",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/artisansdk/cqrs.git",
+                "reference": "c91d9374a82a1e64f802d8389d8b32da2e335dab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/artisansdk/cqrs/zipball/c91d9374a82a1e64f802d8389d8b32da2e335dab",
+                "reference": "c91d9374a82a1e64f802d8389d8b32da2e335dab",
+                "shasum": ""
+            },
+            "require": {
+                "artisansdk/contract": "dev-master",
+                "illuminate/container": "^5.0 | ^6.0 | ^7.0 | ^8.0",
+                "illuminate/database": "^5.0 | ^6.0 | ^7.0 | ^8.0",
+                "illuminate/queue": "^5.0 | ^6.0 | ^7.0 | ^8.0",
+                "illuminate/support": "^5.0 | ^6.0 | ^7.0 | ^8.0",
+                "php": ">=7.0|>=8.0",
+                "psr/log": "^1.0 | ^2.0"
+            },
+            "require-dev": {
+                "artisansdk/bench": "dev-master",
+                "dms/phpunit-arraysubset-asserts": "^0.3.1",
+                "illuminate/cache": "^5.0 | ^6.0 | ^7.0 | ^8.0",
+                "illuminate/pagination": "^5.0 | ^6.0 | ^7.0 | ^8.0",
+                "illuminate/validation": "^5.0 | ^6.0 | ^7.0 | ^8.0"
+            },
+            "suggest": {
+                "artisansdk/event": "CQRS is a pattern used in event-driven applications. The artisansdk/event package is a general purpose event sourcing library for event stores.",
+                "illuminate/cache": "CQRS supports automatic caching and cache-busting of queries using Laravel's CacheManager class.",
+                "illuminate/pagination": "CQRS supports integration of LengthAwarePaginator by using Query::paginate() method.",
+                "illuminate/validation": "CQRS supports automatic creation of a Validator using rules arrays with argument validation."
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ArtisanSdk\\CQRS\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel LaBarge",
+                    "email": "daniel@artisanscollaborative.com"
+                }
+            ],
+            "description": "A foundational package for Command Query Responsibility Segregation (CQRS) compatible with Laravel.",
+            "support": {
+                "issues": "https://github.com/artisansdk/cqrs/issues",
+                "source": "https://github.com/artisansdk/cqrs/tree/master"
+            },
+            "time": "2022-01-11T16:42:52+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.1.1",
@@ -7378,7 +7483,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "artisansdk/cqrs": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

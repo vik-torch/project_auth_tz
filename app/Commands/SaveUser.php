@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Comands;
+namespace App\Commands;
 
 use App\Models\User;
 use ArtisanSdk\CQRS\Command;
@@ -17,7 +17,10 @@ class SaveUser extends Command
     public function run()
     {
         $user = $this->model;
+
         $user->email = $this-> argument ('email');
+        $user->name = $this-> argument ('name');
+        $user->password = $this-> argument ('password');
         $user->save();
 
         return  $user;
